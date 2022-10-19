@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: azure;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  border: 1px solid black;
+  color: rgb(177, 24, 24);
+  padding: 0.5rem;
+}
+
+.img-logo {
+  border: 1px solid black;
+  width: 12%;
+}
+
+.header-items {
+  display: flex;
+}
+
+.header-items li {
+  padding-top: 0.6rem;
+  padding-right: 1rem;
+  margin-right: 2rem;
+  list-style: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: black;
+  gap: 2.5rem;
+  padding: 3rem;
+  min-height: 82vh;
+}
+
+.grid-item {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Modal styling */
+.modal-content {
+  display: none;
+  padding: 4rem;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid black;
+  background-color: #fefefe;
+  background-color: black;
+}
+
+.span-close {
+  color: black;
+  font-size: 30px;
+  font-weight: 800;
+  position: relative;
+  left: 48%;
+  right: 0;
+  top: 0;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer {
+  display: block;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+/* Modal display */
+.modal-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(224, 73, 73);
+  padding: 1rem 0;
+  background-color: aqua;
+  height: auto;
+}
+
+.modal-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 5rem;
+  border: 1px solid red;
+}
+
+.modal-description > * {
+  padding: 0.2rem 0;
+}
+
+.modal-header2,
+.modal-comments {
+  margin-bottom: 1rem;
+}
+
+.comment-form {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.comment-form > * {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+.form-btn {
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.comment-btn {
+  background-color: rgb(134, 138, 138);
+  padding: 0.3rem 1rem;
+  color: rgb(96, 22, 13);
+  font-size: medium;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.fas:hover,
+.comment-btn:hover,
+.span-close:hover {
+  cursor: pointer;
+}
