@@ -18,7 +18,6 @@ const footer = document.querySelector('.footer');
 const likeCount = async (Id, cont) => {
   const count = await updateLikes(Id);
   cont.innerHTML = `${count} likes`;
-  console.log("what's wrong");
 };
 
 const renderCards = async () => {
