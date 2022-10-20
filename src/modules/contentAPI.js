@@ -1,5 +1,10 @@
 const apiUrl = 'https://api.tvmaze.com/';
 
-const main = async () => fetch(`${apiUrl}shows`).then((result) => result.json()).then((data) => data.slice(0, 12));
+const main = async () => {
+  const mainApi = await fetch(`${apiUrl}shows`);
+  const resultApi = await mainApi.json();
+
+  return resultApi;
+};
 
 export default main;
