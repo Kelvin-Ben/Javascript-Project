@@ -8,7 +8,7 @@
 
 
 # Project Video link:
-[link to video]
+[link to video](https://user-images.githubusercontent.com/85459676/197043856-26adebc1-8375-4fe1-a9f3-039c12476590.mp4)
 
 
 > In this project, We created an interactive web app using multiple API's to get and render info and multimedia, as well as implement like and comment features.
