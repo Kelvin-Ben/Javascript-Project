@@ -4,7 +4,8 @@
 
 # interactive wepApp with Webpack and APIs.
 
-![Screenshot_2022-10-20_20-49-46.png]([Screenshot_2022-10-20_20-49-46.png)
+![Screenshot_2022-10-20_20-49-46](https://user-images.githubusercontent.com/85459676/197026288-a63cf34c-858d-4502-b8f8-d0343374fafc.png)
+
 
 # Project Video link:
 [link to video]
