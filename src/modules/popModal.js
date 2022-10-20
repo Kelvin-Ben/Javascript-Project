@@ -1,11 +1,13 @@
 import { renderImage2 } from './createImg.js';
+import { postComment } from './commentsAPI.js';
+import { renderComments, commentsCount } from './helperMethods.js';
 
 const displayModal = document.querySelector('.modal-content');
 const grid = document.querySelector('.grid-container');
 const header = document.querySelector('.header');
 const footer = document.querySelector('.footer');
 
-const popModal = (element) => {
+const popModal = async (element) => {
   displayModal.innerHTML = '';
   const ItemsCont = document.createElement('div');
   ItemsCont.classList.add('modal-items');
@@ -49,10 +51,12 @@ const popModal = (element) => {
 
   const modalCommentHeader = document.createElement('h3');
   modalCommentHeader.classList.add('modal-header2');
-  modalCommentHeader.innerHTML = 'Comments';
+  commentsCount(element.id, modalCommentHeader);
 
   const modalCommentContainer = document.createElement('div');
   modalCommentContainer.classList.add('modal-comments');
+
+  renderComments(element.id, modalCommentContainer);
 
   const modalFormHeader = document.createElement('h3');
   modalFormHeader.innerHTML = 'Add a comment';
@@ -85,25 +89,16 @@ const popModal = (element) => {
   elementItems.append(showLang, showPremiere, showGenre, showTime, showDesc);
 
   const btn = document.querySelector('.form-btn');
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener('click', async (e) => {
     e.preventDefault();
     if (textArea.value && formInput.value) {
-      const now = new Date();
-      const options = {
-        day: 'numeric',
-        month: 'numeric',
-        year: 'numeric',
-      };
-      const locale = navigator.us;
-      const html = `<p>${new Intl.DateTimeFormat(locale, options).format(now)}  ${formInput.value}: ${textArea.value}</p>`;
-      modalCommentContainer.insertAdjacentHTML('beforeend', html);
+      await postComment(element.id, formInput.value, textArea.value);
+      await renderComments(element.id, modalCommentContainer);
+      await commentsCount(element.id, modalCommentHeader);
       textArea.value = '';
       formInput.value = '';
     }
   });
 };
-
-/* Get the id, url, image: testSample.image.medium, name, language,
-runtime,premiered on:,  genre: testSample.genres[0], and summary  */
 
 export default popModal;
