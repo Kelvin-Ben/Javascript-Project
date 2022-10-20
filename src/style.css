@@ -62,7 +62,7 @@ body {
   background-color: black;
 }
 
-.close {
+.span-close {
   color: black;
   font-size: 30px;
   font-weight: 800;
@@ -93,22 +93,20 @@ body {
   border: 1px solid rgb(224, 73, 73);
   padding: 1rem 0;
   background-color: aqua;
-}
-
-.modal-image {
-  border: 1px solid black;
-  border-radius: 1rem;
-  width: 40%;
-  height: 30vh;
-  margin-bottom: 1rem;
+  height: auto;
 }
 
 .modal-description {
   display: flex;
-  justify-content: space-between;
-  width: 30%;
-  margin: 1rem 0;
-  margin-bottom: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 5rem;
+  border: 1px solid red;
+}
+
+.modal-description > * {
+  padding: 0.2rem 0;
 }
 
 .modal-header2,
@@ -117,6 +115,31 @@ body {
 }
 
 .comment-form {
-  margin-top: 1rem;
-  display: block;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.comment-form > * {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+.form-btn {
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.comment-btn {
+  background-color: rgb(134, 138, 138);
+  padding: 0.3rem 1rem;
+  color: rgb(96, 22, 13);
+  font-size: medium;
+  font-style: oblique;
+  font-weight: bold;
+}
+
+.fas:hover {
+  cursor: pointer;
 }
