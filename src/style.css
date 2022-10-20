@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -92,7 +93,7 @@ body {
   align-items: center;
   border: 1px solid rgb(224, 73, 73);
   padding: 1rem 0;
-  background-color: aqua;
+  background-color: #0c8599;
   height: auto;
 }
 
