@@ -4,17 +4,17 @@ describe('Testing comments counter function', () => {
   test('Count comments', () => {
     const items = [{
       item_id: 'item1',
-      username: 'Franklin',
+      username: 'Kelvin',
       comment: 'Hello world',
     },
     {
       item_id: 'item2',
-      username: 'Charles',
+      username: 'Stanley',
       comment: 'Hello world',
     },
     {
       item_id: 'item3',
-      username: 'Franklin',
+      username: 'Stanely',
       comment: 'Hello worldddddd',
     },
     ];
